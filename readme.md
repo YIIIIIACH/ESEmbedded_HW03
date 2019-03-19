@@ -83,8 +83,8 @@ This is the hw03 sample. Please follow the steps below.
 
 - 2 result
 	- observation 1
-  	'0e:	2301      	movs	r3, [#1]			int a=1;'
-  	'10:	617b      	str	r3, [r7, #20]'
+  		0e:	2301      	movs	r3, [#1]		int a=1;
+  		10:	617b      	str	r3, [r7, #20]
 	
 宣告一個local variable並賦值時，會先將要assign的數值存到reg，再存入stack裡面。
 
