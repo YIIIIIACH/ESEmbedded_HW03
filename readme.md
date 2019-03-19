@@ -53,7 +53,7 @@ This is the hw03 sample. Please follow the steps below.
 
 --------------------
 
-- 1 how I design the observation
+* 1 how I design the observation
 	- I claim two function .One of them has a function call of another function ,so I can observe what will happen if there're 		fuction call inside a function which was called by another function.
 	- Setup some variable and do some calculation to see how does variables work in assembly code.
 ******************************************************************************************************************************
@@ -81,7 +81,7 @@ This is the hw03 sample. Please follow the steps below.
 
 ******************************************************************************************************************************
 
-- 2 result
+* 2 result
 	- observation 1
   		0e:	2301      	movs	r3, [#1]		int a=1;
   		10:	617b      	str	r3, [r7, #20]
