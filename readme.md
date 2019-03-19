@@ -53,8 +53,8 @@ This is the hw03 sample. Please follow the steps below.
 
 --------------------
 
-*1 how I design the observation
-	1. I claim two function .One of them has a function call of another function ,so I can observe what will happen if there're fuction call inside a function which was called by another function.
+*[1 how I design the observation]
+	- I claim two function .One of them has a function call of another function ,so I can observe what will happen if there're fuction call inside a function which was called by another function.
 	2. Setup some variable and do some calculation to see how does variables work in assembly code.
 ******************************************************************************************************************************
 	void reset_handler(void)
@@ -81,10 +81,10 @@ This is the hw03 sample. Please follow the steps below.
 
 ******************************************************************************************************************************
 
-*2 result 
+*[2 result ]
 	<observation 1> 
-  	 	e:	2301      	movs	r3, #1				int a =1;
-  		10:	617b      	str	r3, [r7, #20]	// r7在這裡是sp
+  	e:	2301      	movs	r3, #1				int a =1;
+  	10:	617b      	str	r3, [r7, #20]	// r7在這裡是sp
 宣告一個local variable並賦值時，會先將要assign的數值存到reg，再存入stack裡面。
 
 	<observation 2>
