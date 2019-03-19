@@ -1,11 +1,20 @@
 void reset_handler(void)
 {
+<<<<<<< HEAD
 	int a =1;	// claim a variable to see what happen in assembly code  <observation 1>
 	a++;		// change a variable's value to see what will happen     <observation 2>
 	a--;
 	int b =2;	
 	int c =3;
 	int d =4;
+=======
+	int a =1;   	// claim a variable to see what happen in assembly code  <conservation 1>
+	a++;		// change a variable's value to see what will happen     <conservation 2>
+	a--;
+	int b =2;  	// claim a variable to see what happen in assembly code  
+	int c =3;  	// claim a variable to see what happen in assembly code  
+	int d =4;  	// claim a variable to see what happen in assembly code  
+>>>>>>> d7c4bef1fdfd77f10d22722adb6f944669b9337e
 	int result;
 	result= compute(a,b,c,d);	//call a function which also has another function inside it <observation 3>
 }
