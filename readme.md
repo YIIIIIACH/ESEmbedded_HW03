@@ -83,7 +83,7 @@ This is the hw03 sample. Please follow the steps below.
 
 - 2 result
 	
-	<observation 1> 
+	<observation 1>
   	  0e:	2301      	movs	r3, #1				int a =1;
   	  10:	617b      	str	r3, [r7, #20]	
 		// r7在這裡是sp
