@@ -82,14 +82,13 @@ This is the hw03 sample. Please follow the steps below.
 ******************************************************************************************************************************
 
 - 2 result
-	
-	-observation 1
+	- observation 1
   	0e:	2301      	movs	r3, #1				int a =1;
   	10:	617b      	str	r3, [r7, #20]
 	
 宣告一個local variable並賦值時，會先將要assign的數值存到reg，再存入stack裡面。
 
-	-observation 2
+	- observation 2
 	  12:	697b      	ldr	r3, [r7, #20]			a++;
 	  14:	3301      	adds	r3, #1
 	  16:	617b      	str	r3, [r7, #20]
@@ -98,7 +97,7 @@ This is the hw03 sample. Please follow the steps below.
 	  1c:	617b      	str	r3, [r7, #20]
 當在一個function里對variables 做運算時，每個步驟得先將variable的值從stack memory load 到 register里。當register 運算完後得先存入 stack memory 才能進行下一步驟。
 
-	-observation 3
+	- observation 3
 	32:	f000 f805 	bl	40 <compute>			compute(a,b,c,d);
 		.
 		.
@@ -113,7 +112,7 @@ This is the hw03 sample. Please follow the steps below.
 		.
 	52:	f000 f80b 	bl	6c <sub>			sub(d,c); // 在function裡面的function call
 
-	-observation 4
+	- observation 4
 	  4e:	6838      	ldr	r0, [r7, #0]			sub(d,c);	
 	  50:	6879      	ldr	r1, [r7, #4]
 	  52:	f000 f80b 	bl	6c <sub>
@@ -126,7 +125,7 @@ This is the hw03 sample. Please follow the steps below.
 	  74:	6039      	str	r1, [r7, #0]
 為了將function call 所需要的參數(augment)保留給所呼叫的function使用，在 jump 到被呼叫function前我們得要先將function會用到的參數先load到register，等jump到function區塊里時再將代表augment的register存入function的stack memory區塊。
 
-	-observation 5
+	- observation 5
 	0000006c <sub>:
 		.
 		.
