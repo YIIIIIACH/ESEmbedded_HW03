@@ -1,11 +1,11 @@
 void reset_handler(void)
 {
-	int a =1;
-	a++;
+	int a =1;   	// claim a variable to see what happen in assembly code  <conservation 1>
+	a++;		// change a variable's value to see what will happen     <conservation 2>
 	a--;
-	int b =2;
-	int c =3;
-	int d =4;
+	int b =2;  	// claim a variable to see what happen in assembly code  
+	int c =3;  	// claim a variable to see what happen in assembly code  
+	int d =4;  	// claim a variable to see what happen in assembly code  
 	int result;
 	result= compute(a,b,c,d);
 }
