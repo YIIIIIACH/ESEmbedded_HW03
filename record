@@ -1,0 +1,58 @@
+00000000 <reset_handler-0x8>:
+   0:	20000100 	andcs	r0, r0, r0, lsl #2
+   4:	00000009 	andeq	r0, r0, r9
+
+00000008 <reset_handler>:
+   8:	b580      	push	{r7, lr}
+   a:	b086      	sub	sp, #24
+   c:	af00      	add	r7, sp, #0
+   e:	2301      	movs	r3, #1
+  10:	617b      	str	r3, [r7, #20]
+  12:	2302      	movs	r3, #2
+  14:	613b      	str	r3, [r7, #16]
+  16:	2303      	movs	r3, #3
+  18:	60fb      	str	r3, [r7, #12]
+  1a:	2304      	movs	r3, #4
+  1c:	60bb      	str	r3, [r7, #8]
+  1e:	6978      	ldr	r0, [r7, #20]
+  20:	6939      	ldr	r1, [r7, #16]
+  22:	f000 f809 	bl	38 <add>
+  26:	6078      	str	r0, [r7, #4]
+  28:	68f8      	ldr	r0, [r7, #12]
+  2a:	68b9      	ldr	r1, [r7, #8]
+  2c:	f000 f812 	bl	54 <sub>
+  30:	6078      	str	r0, [r7, #4]
+  32:	3718      	adds	r7, #24
+  34:	46bd      	mov	sp, r7
+  36:	bd80      	pop	{r7, pc}
+
+00000038 <add>:
+  38:	b480      	push	{r7}
+  3a:	b083      	sub	sp, #12
+  3c:	af00      	add	r7, sp, #0
+  3e:	6078      	str	r0, [r7, #4]
+  40:	6039      	str	r1, [r7, #0]
+  42:	687a      	ldr	r2, [r7, #4]
+  44:	683b      	ldr	r3, [r7, #0]
+  46:	4413      	add	r3, r2
+  48:	4618      	mov	r0, r3
+  4a:	370c      	adds	r7, #12
+  4c:	46bd      	mov	sp, r7
+  4e:	f85d 7b04 	ldr.w	r7, [sp], #4
+  52:	4770      	bx	lr
+
+00000054 <sub>:
+  54:	b480      	push	{r7}
+  56:	b083      	sub	sp, #12
+  58:	af00      	add	r7, sp, #0
+  5a:	6078      	str	r0, [r7, #4]
+  5c:	6039      	str	r1, [r7, #0]
+  5e:	687a      	ldr	r2, [r7, #4]
+  60:	683b      	ldr	r3, [r7, #0]
+  62:	1ad3      	subs	r3, r2, r3
+  64:	4618      	mov	r0, r3
+  66:	370c      	adds	r7, #12
+  68:	46bd      	mov	sp, r7
+  6a:	f85d 7b04 	ldr.w	r7, [sp], #4
+  6e:	4770      	bx	lr
+
