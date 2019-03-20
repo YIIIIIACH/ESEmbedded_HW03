@@ -90,12 +90,12 @@ This is the hw03 sample. Please follow the steps below.
 宣告一個local variable並賦值時，會先將要assign的數值存到reg，再存入stack裡面。
 
 	- observation 2
-	  12:	697b      	ldr	r3, [r7, #20]			a++;
-	  14:	3301      	adds	r3, #1
-	  16:	617b      	str	r3, [r7, #20]
-	  18:	697b      	ldr	r3, [r7, #20]			a--;
-	  1a:	3b01      	subs	r3, #1
-	  1c:	617b      	str	r3, [r7, #20]
+	12:	697b      	ldr	r3, [r7, #20]			a++;
+	14:	3301      	adds	r3, #1
+	16:	617b      	str	r3, [r7, #20]
+	18:	697b      	ldr	r3, [r7, #20]			a--;
+	1a:	3b01      	subs	r3, #1
+	1c:	617b      	str	r3, [r7, #20]
 當在一個function里對variables 做運算時，每個步驟得先將variable的值從stack memory load 到 register里。當register 運算完後得先存入 stack memory 才能進行下一步驟。
 
 	- observation 3
