@@ -112,6 +112,10 @@ This is the hw03 sample. Please follow the steps below.
 		.
 		.
 	52:	f000 f80b 	bl	6c <sub>			sub(d,c); // 在function裡面的function call
+	6c:	b480      	push	{r7}
+  	6e:	b083      	sub	sp, #12
+
+呼叫function call 後program counter 會跳到function的位置，然後將 r7  push儲存進stack memory。此時r7 里的值指向上一層 function所使用到的stack memory最底層的位址。
 
 	- observation 4
 	  4e:	6838      	ldr	r0, [r7, #0]			sub(d,c);	
